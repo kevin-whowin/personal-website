@@ -10,14 +10,14 @@ const Navbar = () => {
       <div className="items-end flex space-x-4">
         <button type="button" onClick={() => router.push('/')}>
           Kevin
+        </button>   
+        <button type="button" onClick={() => router.push('/projects')}>
+         Projects
+        </button>     
+        <button type="button" onClick={() => router.push('/aboutme')}>
+          About Me
         </button>
-        <div>
-          <Link href="/projects" className="">
-            <p className="inset-y-0 left-0 pl-24">
-              Projectx
-            </p>
-          </Link>
-        </div>
+
     </div>
     </nav>
   );
