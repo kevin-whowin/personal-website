@@ -1,20 +1,33 @@
 'use client';
 import { useFadeIn } from './useFadeIn';
 import EvaIcon from '../components/EvaIcons';
+import { useRouter } from 'next/navigation';
+
 
 export default function Home() {
   const fadeRef1 = useFadeIn();
   const fadeRef2 = useFadeIn();
+  const router = useRouter()
 
   return (
     <main className="flex flex-col items-center bg-cover">
       <div className="min-h-screen flex items-center justify-center">
         <div ref={fadeRef1} className="opacity-0 transition-opacity duration-1000 ease-in-out text-center">
+        <div className="flex justify-center gap-x-10 font-bold"> 
+          <button type="button" onClick={() => router.push('/projects')}>
+          Projects
+          </button>     
+          <button type="button" onClick={() => router.push('/aboutme')}>
+            About Me
+          </button>
+        </div>
           <h1 className="pb-4 text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 sm:text-7xl flex items-center justify-center">
-            Kevin Huynh!
-            <EvaIcon name="heart" size={32} fill="#FFFFFF" animation="pulse" />
+            Kevin Huynh
+            <EvaIcon name="heart" size={32} fill="#FFFFFF" animation="zoom" />
           </h1>
-          <a className="text-white">i like trains</a>
+          <a className="flex font-bold text-2xl justify-center mt-2"> 
+          i like trains  
+          </a>
         </div>
       </div>
 
@@ -26,7 +39,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <EvaIcon name="linkedin" size={32} fill="#FFFFFF" animation="pulse" />
-            <h2 className="mb-3 text-2xl font-semibold text-white">
+            <h2 className="my-1 text-2xl font-semibold text-white">
               LinkedIn{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                 -&gt;
@@ -42,7 +55,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <EvaIcon name="github" size={32} fill="#FFFFFF" animation="pulse" />
-            <h2 className="mb-3 text-2xl font-semibold text-white">
+            <h2 className="my-1 text-2xl font-semibold text-white">
               Github{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                 -&gt;
@@ -58,7 +71,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <EvaIcon name="email" size={32} fill="#FFFFFF" animation="pulse" />
-            <h2 className="mb-3 text-2xl font-semibold text-white">
+            <h2 className="my-1 text-2xl font-semibold text-white">
               Email{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                 -&gt;
@@ -75,7 +88,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <EvaIcon name="file" size={32} fill="#FFFFFF" animation="pulse" />
-            <h2 className="mb-3 text-2xl font-semibold text-white">
+            <h2 className="my-1 text-2xl font-semibold text-white">
               Resume{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                 -&gt;

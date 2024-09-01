@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 interface Project {
   id: number;
@@ -22,9 +25,14 @@ const projects: Project[] = [
 ];
 
 export default function Projects() {
+  const router = useRouter()
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-start p-24">
       <h1 className="text-4xl font-bold mb-8">My Projects</h1>
+        <button type="button" onClick={() => router.push('/')}>
+          Kevin
+        </button>  
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
           <div key={project.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
