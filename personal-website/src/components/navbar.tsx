@@ -6,7 +6,7 @@ const Navbar = () => {
   const router = useRouter()
 
   return (
-    <nav className="flex sticky top-0 z-50 bg-gray-800 text-white p-4">
+    <nav className="flex sticky top-0 z-50 bg-zinc-950 text-white p-4">
       <div className="items-end flex space-x-4">
         <button type="button" onClick={() => router.push('/')}>
           Kevin
