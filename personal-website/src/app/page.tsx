@@ -21,7 +21,7 @@ export default function Home() {
             About Me
           </button>
         </div>
-          <h1 className="pb-4 text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 sm:text-7xl flex items-center justify-center">
+          <h1 className="pb-4 text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-500 sm:text-7xl flex items-center justify-center">
             Kevin Huynh
             <EvaIcon name="heart" size={32} fill="#FFFFFF" animation="zoom" />
           </h1>
