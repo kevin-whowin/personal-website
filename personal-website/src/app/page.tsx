@@ -10,7 +10,7 @@ export default function Home() {
   const router = useRouter()
 
   return (
-    <main className="flex flex-col items-center bg-cover">
+    <main className="flex bg-background flex-col items-center bg-cover">
       <div className="min-h-screen flex items-center justify-center">
         <div ref={fadeRef1} className="opacity-0 transition-opacity duration-1000 ease-in-out text-center">
         <div className="flex justify-center gap-x-10 font-bold"> 
@@ -21,7 +21,7 @@ export default function Home() {
             About Me
           </button>
         </div>
-          <h1 className="pb-4 text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-500 sm:text-7xl flex items-center justify-center">
+          <h1 className="pb-4 text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-purple to-accent-orange sm:text-7xl flex items-center justify-center">
             Kevin Huynh
             <EvaIcon name="heart" size={32} fill="#FFFFFF" animation="zoom" />
           </h1>
